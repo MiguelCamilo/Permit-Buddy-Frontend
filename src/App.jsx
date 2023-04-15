@@ -12,6 +12,7 @@ const defaultForm = {
     alterInteriorSelected: "ALTER - INTERIOR",
      reRoofSelected: "RE-ROOF/REPAIR",
      newSelecte: "NEW",
+     id: "ResultYes"
 }
 
 function App() {
