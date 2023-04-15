@@ -1,9 +1,18 @@
 import { useState } from "react";
 import "./form.css";
 
-function ApplicationType({ nextFormButton, currentSlide, setCurrentSlide }) {
-	// const [homeOwner, setHomeOwner] = useState("");
-	// const [contractor, setContractor] = useState("");
+function ApplicationType({ nextFormButton, setForm }) {
+	const [homeOwner, setHomeOwner] = useState("");
+	const [contractor, setContractor] = useState("");
+
+	const handleSelectChange = (event) => {
+		setForm(event.target.value);
+	  };
+
+	const nextForm = () => {
+		nextFormButton()
+	}
+
 	// const [data, setData] = useState("");
 
 	// const handleFormSubmit = (e) => {
@@ -33,7 +42,6 @@ function ApplicationType({ nextFormButton, currentSlide, setCurrentSlide }) {
 						<h2 className="text-4xl font-extrabold">Type</h2>
 						<div className="w-form">
 							<form
-								// onSubmit={handleFormSubmit}
 								id="wf-form-Type-Individual"
 								name="wf-form-Type-Individual"
 								data-name="Type Individual"
@@ -86,27 +94,28 @@ function ApplicationType({ nextFormButton, currentSlide, setCurrentSlide }) {
 								</a>
 								<div className="div-block-2">
 									<label className="field-label">Who is submitting</label>
-									<select
+									<select																				
 										id="field"
 										name="field"
 										data-name="Field"
 										className="w-select"
 										required
+										onChange={handleSelectChange}
 									>
 										<option value="">Select one...</option>
 										<option value={homeOwner}>Home Owner</option>
 										<option value={contractor}>Contractor</option>
 									</select>
 								</div>
-								<div className="div-block">
+							</form>
+							<div className="div-block">
 									<button
-										// onClick={handleFormSubmit}
+										onClick={nextForm}
 										className="next-button w-button"
 									>
-										Submit
+										Next
 									</button>
 								</div>
-							</form>
 							<div className="w-form-done">
 								<div>Thank you! Your submission has been received!</div>
 							</div>

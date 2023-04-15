@@ -8,8 +8,8 @@ import Results from "./components/Form/Results";
 import "./App.css";
 
 function App() {
-  const [currentSlide, setCurrentSlide] = useState(1);
-  const [form,setForm] = useState({})
+	const [currentSlide, setCurrentSlide] = useState(1);
+	const [form, setForm] = useState({});
 
 	const nextFormButton = () => {
 		setCurrentSlide(currentSlide + 1);
@@ -19,18 +19,30 @@ function App() {
 		<>
 			{/* <Welcome /> */}
 			{/* <ApplicationType /> */}
-			{currentSlide === 1 && <Welcome nextFormButton={nextFormButton} form={form}  setForm={setForm} />}
+			{currentSlide === 1 && (
+				<Welcome
+					nextFormButton={nextFormButton}
+					form={form}
+					setForm={setForm}
+				/>
+			)}
 			{currentSlide === 2 && (
 				<ApplicationType
 					nextFormButton={nextFormButton}
 					currentSlide={currentSlide}
 					setCurrentSlide={setCurrentSlide}
-          form={form}  setForm={setForm}
+					form={form}
+					setForm={setForm}
 				/>
 			)}
-			{currentSlide === 3 && <Categories nextFormButton={nextFormButton} 
-       form={form}  setForm={setForm} />}
-			{currentSlide === 4 && <Results   form={form}  setForm={setForm} />}
+			{currentSlide === 3 && (
+				<Categories
+					nextFormButton={nextFormButton}
+					form={form}
+					setForm={setForm}
+				/>
+			)}
+			{currentSlide === 4 && <Results form={form} setForm={setForm} />}
 		</>
 	);
 }
