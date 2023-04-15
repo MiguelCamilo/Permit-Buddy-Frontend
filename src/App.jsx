@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import Form from './components/Form'
 import './App.css'
 
 function App() {
 
   return (
-    <>
-      <p className='text-green-500'>Hello</p>
-    </>
+    <div className="flex justify-center items-center h-screen min-w-screen">
+      <Form/>
+    </div>
   )
 }
 
