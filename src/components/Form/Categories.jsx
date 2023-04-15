@@ -1,6 +1,32 @@
+import React, { useEffect, useState, useRef } from "react";
 import "./form.css"
+import Select, { components } from "react-select";
+import {AppTypesOptions} from "../../data/apptype.js"
+import "./autofill.css";
+
 
 function Categories({ nextFormButton }) {
+	const options = useRef(AppTypesOptions).current;
+	const onAutoFill = (e) => {
+		if (e.animationName === "onAutoFillStart") {
+		  // do something
+		}
+		if (e.animationName === "onAutoFillCancel") {
+		  // do something
+		}
+	  };
+
+	  const styles = {
+		input: (css, state) => ({
+		  ...css,
+		  "input:-webkit-autofill": {
+			animationName: "onAutoFillStart"
+		  },
+		  "input:not(:-webkit-autofill)": {
+			animationName: "onAutoFillCancel"
+		  }
+		})
+	  };
 	return (
 		<>
 			<div className="slider_wrapper">
@@ -15,135 +41,14 @@ function Categories({ nextFormButton }) {
 								method="get"
 								className="form horiz"
 							>
-								<label className="radio-button-field cat w-radio">
-									<input
-										type="radio"
-										id="radio-3"
-										name="Type"
-										defaultValue="Radio"
-										data-name="Type"
-										className="w-form-formradioinput radio-button w-radio-input"
-									/>
-									<span
-										className="radio-button-label w-form-label"
-										htmlFor="radio-3"
-									>
-										Building permits
-									</span>
-								</label>
-								<label className="radio-button-field cat w-radio">
-									<input
-										type="radio"
-										id="radio-3"
-										name="Type"
-										defaultValue="Radio"
-										data-name="Type"
-										className="w-form-formradioinput radio-button w-radio-input"
-									/>
-									<span
-										className="radio-button-label w-form-label"
-										htmlFor="radio-3"
-									>
-										Zoning permits
-									</span>
-								</label>
-								<label className="radio-button-field cat w-radio">
-									<input
-										type="radio"
-										id="radio-3"
-										name="Type"
-										defaultValue="Radio"
-										data-name="Type"
-										className="w-form-formradioinput radio-button w-radio-input"
-									/>
-									<span
-										className="radio-button-label w-form-label"
-										htmlFor="radio-3"
-									>
-										Environmental permits
-									</span>
-								</label>
-								<label className="radio-button-field cat w-radio">
-									<input
-										type="radio"
-										id="radio-3"
-										name="Type"
-										defaultValue="Radio"
-										data-name="Type"
-										className="w-form-formradioinput radio-button w-radio-input"
-									/>
-									<span
-										className="radio-button-label w-form-label"
-										htmlFor="radio-3"
-									>
-										Electrical permits
-									</span>
-								</label>
-								<label className="radio-button-field cat w-radio">
-									<input
-										type="radio"
-										id="radio-3"
-										name="Type"
-										defaultValue="Radio"
-										data-name="Type"
-										className="w-form-formradioinput radio-button w-radio-input"
-									/>
-									<span
-										className="radio-button-label w-form-label"
-										htmlFor="radio-3"
-									>
-										Plumbing permits
-									</span>
-								</label>
-								<label className="radio-button-field cat w-radio">
-									<input
-										type="radio"
-										id="radio-3"
-										name="Type"
-										defaultValue="Radio"
-										data-name="Type"
-										className="w-form-formradioinput radio-button w-radio-input"
-									/>
-									<span
-										className="radio-button-label w-form-label"
-										htmlFor="radio-3"
-									>
-										Mechanical permits
-									</span>
-								</label>
-								<label className="radio-button-field cat w-radio">
-									<input
-										type="radio"
-										id="radio-3"
-										name="Type"
-										defaultValue="Radio"
-										data-name="Type"
-										className="w-form-formradioinput radio-button w-radio-input"
-									/>
-									<span
-										className="radio-button-label w-form-label"
-										htmlFor="radio-3"
-									>
-										Fire permits
-									</span>
-								</label>
-								<label className="radio-button-field cat w-radio">
-									<input
-										type="radio"
-										id="radio-3"
-										name="Type"
-										defaultValue="Radio"
-										data-name="Type"
-										className="w-form-formradioinput radio-button w-radio-input"
-									/>
-									<span
-										className="radio-button-label w-form-label"
-										htmlFor="radio-3"
-									>
-										Health permits
-									</span>
-								</label>
+
+	\
+
 							</form>
+
+
+
+
 							<div className="w-form-done">
 								<div>Thank you! Your submission has been received!</div>
 							</div>
@@ -159,32 +64,12 @@ function Categories({ nextFormButton }) {
 								method="get"
 								className="form-2"
 							>
-								<input
-									type="text"
-									className="text-field w-input"
-									maxLength={256}
-									name="name-2"
-									data-name="Name 2"
-									placeholder="Search"
-									id="name-2"
-								/>
-								<div className="search_container">
-									<p className="serach-record">
-										<strong>Envir</strong>onmental permits
-									</p>
-									<p className="serach-record">
-										<strong>Envir</strong>onmental permits
-									</p>
-									<p className="serach-record">
-										<strong>Envir</strong>onmental permits
-									</p>
-									<p className="serach-record">
-										<strong>Envir</strong>onmental permits
-									</p>
-									<p className="serach-record">
-										<strong>Envir</strong>onmental permits
-									</p>
-								</div>
+										
+						<label className="radio-button-field cat w-radio">
+							Application Types
+							<Select style={{"width" : "100%"}} components={{ Categories }} options={options} />
+						</label>
+
 							</form>
 							<div className="w-form-done">
 								<div>Thank you! Your submission has been received!</div>
