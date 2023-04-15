@@ -1,15 +1,39 @@
+import { useState} from "react";
+
 import "./form.css";
 
 export default function Welcome({ nextFormButton }) {
+	const [name, setName] = useState("")
+	const [email, setEmail] = useState("")
+	const [data, setData] = useState("")
+
+	// const handleForm = (e) => {
+	// 	e.preventDefault()
+	
+	// 	const formData = {  }
+
+	// 	fetch("https://permit-buddy-api.web.app/form", {
+	// 		method: "POST",
+	// 		headers: {
+	// 		  "Content-type": "application/json;charset=UTF-8",
+	// 		},
+	// 		body: JSON.stringify(formData),
+	// 	  })
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			setData(data)
+	// 		});
+	// 	}
+
 	return (
 		<>
 			<div className="slider_component">
 				<div className="slider_wrapper">
 					<div className="slider">
 						<div className="container-wrapper">
-							<h1>Welcome!</h1>
+							<h1 className="text-4xl font-bold">Welcome!</h1>
 							<div id="Form" className="w-form">
-								<form
+								<form								
 									id="email-form"
 									name="email-form"
 									data-name="Email Form"
@@ -18,6 +42,8 @@ export default function Welcome({ nextFormButton }) {
 								>
 									<label htmlFor="name">Name</label>
 									<input
+										value={name}
+										onChange={e => setName(e.target.value)}
 										type="text"
 										className="w-input"
 										maxLength={256}
@@ -28,6 +54,8 @@ export default function Welcome({ nextFormButton }) {
 									/>
 									<label htmlFor="email">Email Address</label>
 									<input
+										value={email}
+										onChange={e => setEmail(e.target.value)}
 										type="email"
 										className="w-input"
 										maxLength={256}
@@ -37,6 +65,7 @@ export default function Welcome({ nextFormButton }) {
 										id="email"
 										required=""
 									/>
+									<button type="submit">Submit</button>
 								</form>
 								<div className="w-form-done">
 									<div>Thank you! Your submission has been received!</div>

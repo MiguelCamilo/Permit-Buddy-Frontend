@@ -1,12 +1,13 @@
 import "./form.css"
 
 function ApplicationType({ nextFormButton }) {
+	
 	return (
 		<>
 			<div className="slider_wrapper">
 				<div className="slider">
 					<div className="container-wrapper">
-						<h2>Type</h2>
+						<h2 className="text-4xl font-extrabold">Type</h2>
 						<div className="w-form">
 							<form
 								id="wf-form-Type-Individual"
@@ -16,12 +17,12 @@ function ApplicationType({ nextFormButton }) {
 								className="form horiz"
 							>
 								<label className="radio-button-field w-radio">
-									{/* <img
+									<img
 										loading="lazy"
-										src="images/user-alt-solid.svg"
+										src="/public/home-lg-alt.svg"
 										alt=""
 										className="image-2"
-									/> */}
+									/>
 									<input
 										type="radio"
 										id="radio-3"
@@ -31,19 +32,19 @@ function ApplicationType({ nextFormButton }) {
 										className="w-form-formradioinput radio-button w-radio-input"
 									/>
 									<span
-										className="radio-button-label w-form-label"
+										className="radio-button-label w-form-label font-thin"
 										htmlFor="radio-3"
 									>
 										Residential
 									</span>
 								</label>
 								<label className="radio-button-field w-radio">
-									{/* <img
+									<img
 										loading="lazy"
-										src="images/user-tie-solid-1.svg"
+										src="/public/building.svg"
 										alt=""
 										className="image"
-									/> */}
+									/>
 									<input
 										type="radio"
 										id="radio-2"
@@ -53,7 +54,7 @@ function ApplicationType({ nextFormButton }) {
 										className="w-form-formradioinput radio-button w-radio-input"
 									/>
 									<span
-										className="radio-button-label w-form-label"
+										className="radio-button-label w-form-label font-thin"
 										htmlFor="radio-2"
 									>
 										Comercial
