@@ -1,6 +1,6 @@
 import "./form.css";
 
-function Results({}) {
+function Results() {
 	return (
 		<>
 			<div className="slider_wrapper">
