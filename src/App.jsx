@@ -7,9 +7,16 @@ import Results from "./components/Form/Results";
 
 import "./App.css";
 
+const defaultForm = {
+   alterExteriorSelected:"ALTER - EXTERIOR",
+    alterInteriorSelected: "ALTER - INTERIOR",
+     reRoofSelected: "RE-ROOF/REPAIR",
+     newSelecte: "NEW",
+}
+
 function App() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const [form,setForm] = useState({})
+  const [form,setForm] = useState(defaultForm)
 
 	const nextFormButton = () => {
 		setCurrentSlide(currentSlide + 1);
