@@ -1,7 +1,30 @@
-import "./form.css"
+import { useState } from "react";
+import "./form.css";
 
-function ApplicationType({ nextFormButton }) {
-	
+function ApplicationType({ nextFormButton, currentSlide, setCurrentSlide }) {
+	// const [homeOwner, setHomeOwner] = useState("");
+	// const [contractor, setContractor] = useState("");
+	// const [data, setData] = useState("");
+
+	// const handleFormSubmit = (e) => {
+	// 	e.preventDefault();
+
+	// 	const formData = { homeOwner, contractor };
+
+	// 	fetch("https://permit-buddy-api.web.app/form", {
+	// 		method: "POST",
+	// 		headers: {
+	// 			"Content-type": "application/json;charset=UTF-8",
+	// 		},
+	// 		body: JSON.stringify(formData),
+	// 	})
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			setData(data);
+	// 		});
+	// 		setCurrentSlide(currentSlide + 1);
+	// };
+
 	return (
 		<>
 			<div className="slider_wrapper">
@@ -10,13 +33,14 @@ function ApplicationType({ nextFormButton }) {
 						<h2 className="text-4xl font-extrabold">Type</h2>
 						<div className="w-form">
 							<form
+								// onSubmit={handleFormSubmit}
 								id="wf-form-Type-Individual"
 								name="wf-form-Type-Individual"
 								data-name="Type Individual"
 								method="get"
 								className="form horiz"
 							>
-								<label className="radio-button-field w-radio">
+								<a href="#" className="radio-button-field w-radio">
 									<img
 										loading="lazy"
 										src="/public/home-lg-alt.svg"
@@ -37,8 +61,8 @@ function ApplicationType({ nextFormButton }) {
 									>
 										Residential
 									</span>
-								</label>
-								<label className="radio-button-field w-radio">
+								</a>
+								<a href="#" className="radio-button-field w-radio">
 									<img
 										loading="lazy"
 										src="/public/building.svg"
@@ -57,9 +81,9 @@ function ApplicationType({ nextFormButton }) {
 										className="radio-button-label w-form-label font-thin"
 										htmlFor="radio-2"
 									>
-										Comercial
+										Commercial
 									</span>
-								</label>
+								</a>
 								<div className="div-block-2">
 									<label className="field-label">Who is submitting</label>
 									<select
@@ -67,11 +91,20 @@ function ApplicationType({ nextFormButton }) {
 										name="field"
 										data-name="Field"
 										className="w-select"
+										required
 									>
 										<option value="">Select one...</option>
-										<option value="Owner">Home Owner</option>
-										<option value="Contractor">Contractor</option>
+										<option value={homeOwner}>Home Owner</option>
+										<option value={contractor}>Contractor</option>
 									</select>
+								</div>
+								<div className="div-block">
+									<button
+										// onClick={handleFormSubmit}
+										className="next-button w-button"
+									>
+										Submit
+									</button>
 								</div>
 							</form>
 							<div className="w-form-done">
@@ -80,11 +113,6 @@ function ApplicationType({ nextFormButton }) {
 							<div className="w-form-fail">
 								<div>Oops! Something went wrong while submitting the form.</div>
 							</div>
-						</div>
-						<div className="div-block">
-							<button onClick={() => nextFormButton()} className="next-button w-button">
-								Next
-							</button>
 						</div>
 					</div>
 				</div>

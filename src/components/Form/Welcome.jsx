@@ -65,7 +65,7 @@ export default function Welcome({ nextFormButton }) {
 										id="email"
 										required=""
 									/>
-									<button type="submit">Submit</button>
+									{/* <button type="submit">Submit</button> */}
 								</form>
 								<div className="w-form-done">
 									<div>Thank you! Your submission has been received!</div>
