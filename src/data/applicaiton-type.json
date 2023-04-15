@@ -1,0 +1,142 @@
+[
+  {
+    "ApplicationTypeDescription": "",
+    "ApplicationTypeCode": "",
+    "Frequency": ""
+  },
+  {
+    "ApplicationTypeDescription": "NEW",
+    "ApplicationTypeCode": 7,
+    "Frequency": 27895
+  },
+  {
+    "ApplicationTypeDescription": "ALTER - EXTERIOR",
+    "ApplicationTypeCode": 4,
+    "Frequency": 25368
+  },
+  {
+    "ApplicationTypeDescription": "ALTER - INTERIOR",
+    "ApplicationTypeCode": 3,
+    "Frequency": 24866
+  },
+  {
+    "ApplicationTypeDescription": "RE-ROOF/REPAIR",
+    "ApplicationTypeCode": 13,
+    "Frequency": 24054
+  },
+  {
+    "ApplicationTypeDescription": "ENT REPLACEMENT",
+    "ApplicationTypeCode": 25,
+    "Frequency": 13307
+  },
+  {
+    "ApplicationTypeDescription": "ADDITION - DETACHED",
+    "ApplicationTypeCode": 2,
+    "Frequency": 6890
+  },
+  {
+    "ApplicationTypeDescription": "ADDITION - ATTACHED",
+    "ApplicationTypeCode": 1,
+    "Frequency": 6281
+  },
+  {
+    "ApplicationTypeDescription": "REPAIR",
+    "ApplicationTypeCode": 8,
+    "Frequency": 6161
+  },
+  {
+    "ApplicationTypeDescription": "FENCE NOMASONRY",
+    "ApplicationTypeCode": 29,
+    "Frequency": 4592
+  },
+  {
+    "ApplicationTypeDescription": "ROOF MOUNTED INSTAL",
+    "ApplicationTypeCode": 28,
+    "Frequency": 3514
+  },
+  {
+    "ApplicationTypeDescription": "DEMOLISH",
+    "ApplicationTypeCode": 5,
+    "Frequency": 2214
+  },
+  {
+    "ApplicationTypeDescription": "PROF CERT INSPECTION",
+    "ApplicationTypeCode": 26,
+    "Frequency": 1523
+  },
+  {
+    "ApplicationTypeDescription": "PERMIT BY AFFIDAVIT",
+    "ApplicationTypeCode": 22,
+    "Frequency": 805
+  },
+  {
+    "ApplicationTypeDescription": "MISCELLANEOUS",
+    "ApplicationTypeCode": 31,
+    "Frequency": 493
+  },
+  {
+    "ApplicationTypeDescription": "CONCRETE MASONRY",
+    "ApplicationTypeCode": 30,
+    "Frequency": 434
+  },
+  {
+    "ApplicationTypeDescription": "SHORT TERM EVENT",
+    "ApplicationTypeCode": 24,
+    "Frequency": 381
+  },
+  {
+    "ApplicationTypeDescription": "SHELL ONLY",
+    "ApplicationTypeCode": 12,
+    "Frequency": 330
+  },
+  {
+    "ApplicationTypeDescription": "REPAIR - FIRE DAMAGE",
+    "ApplicationTypeCode": 9,
+    "Frequency": 266
+  },
+  {
+    "ApplicationTypeDescription": "ENCLOSE",
+    "ApplicationTypeCode": 6,
+    "Frequency": 198
+  },
+  {
+    "ApplicationTypeDescription": "TENT",
+    "ApplicationTypeCode": 21,
+    "Frequency": 63
+  },
+  {
+    "ApplicationTypeDescription": "FOUNDATION ONLY",
+    "ApplicationTypeCode": 11,
+    "Frequency": 42
+  },
+  {
+    "ApplicationTypeDescription": "RELOCATE",
+    "ApplicationTypeCode": 10,
+    "Frequency": 34
+  },
+  {
+    "ApplicationTypeDescription": "ENCLOSE/HURRICANE",
+    "ApplicationTypeCode": 32,
+    "Frequency": 20
+  },
+  {
+    "ApplicationTypeDescription": "RE-ROOF/REP/HURRIC",
+    "ApplicationTypeCode": 15,
+    "Frequency": 11
+  },
+  {
+    "ApplicationTypeDescription": "REPAIR/HURRICANE",
+    "ApplicationTypeCode": 16,
+    "Frequency": 5
+  },
+  {
+    "ApplicationTypeDescription": "GROUND MOUNTED INSTA",
+    "ApplicationTypeCode": 27,
+    "Frequency": 4
+  },
+  {
+    "ApplicationTypeDescription": "NEW/HURRICANE",
+    "ApplicationTypeCode": 17,
+    "Frequency": 1
+  }
+]
