@@ -5,8 +5,9 @@ import {AppTypesOptions} from "../../data/apptype.js"
 import "./autofill.css";
 
 
-function Categories({ nextFormButton }) {
+function Categories({ nextFormButton,form,setForm }) {
 	const options = useRef(AppTypesOptions).current;
+	const [appType,setappType] = useState("")
 	const onAutoFill = (e) => {
 		if (e.animationName === "onAutoFillStart") {
 		  // do something
@@ -27,6 +28,15 @@ function Categories({ nextFormButton }) {
 		  }
 		})
 	  };
+
+
+	  function next() {
+		setForm({...form,appType: appType})
+		nextFormButton()
+	  }
+
+
+
 	return (
 		<>
 			<div className="slider_wrapper">
@@ -41,8 +51,6 @@ function Categories({ nextFormButton }) {
 								method="get"
 								className="form horiz"
 							>
-
-	\
 
 							</form>
 
@@ -67,7 +75,7 @@ function Categories({ nextFormButton }) {
 										
 						<label className="radio-button-field cat w-radio">
 							Application Types
-							<Select style={{"width" : "100%"}} components={{ Categories }} options={options} />
+							<Select onChange={(e)=> {setappType(e.label)}} style={{"width" : "100%"}} components={{ Categories }} options={options} />
 						</label>
 
 							</form>
@@ -79,7 +87,7 @@ function Categories({ nextFormButton }) {
 							</div>
 						</div>
 						<div className="div-block">
-							<button onClick={() => nextFormButton()} className="next-button w-button">
+							<button onClick={() => next()} className="next-button w-button">
 								Next
 							</button>
 						</div>
